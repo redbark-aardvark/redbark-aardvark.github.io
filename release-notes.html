@@ -1,0 +1,226 @@
+<title>31 Release Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --felt: #13231d;
+    --felt-light: #1a2e26;
+    --rail: #593524;
+    --gold: #e3b45f;
+    --gold-bright: #f1c675;
+    --cream: #f8f3e7;
+    --cream-dim: rgba(248, 243, 231, 0.68);
+    --cream-faint: rgba(248, 243, 231, 0.45);
+    --border: rgba(227, 180, 95, 0.28);
+    --red-suit: #c0554a;
+    --green-suit: #8ee6ab;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: radial-gradient(120% 140% at 50% -10%, var(--felt-light) 0%, var(--felt) 55%);
+    color: var(--cream);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 64px 24px 80px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  .mark-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(160deg, var(--felt-light), var(--felt));
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--gold-bright);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .mark-name {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--cream-dim);
+    letter-spacing: 0.01em;
+  }
+
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: clamp(2.1rem, 5vw, 2.75rem);
+    text-align: center;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0 0 14px;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: var(--cream-dim);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 48px;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .entry {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+  }
+
+  .entry-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+
+  .entry-version {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--cream);
+  }
+
+  .entry-date {
+    font-size: 0.82rem;
+    color: var(--cream-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .entry-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--felt);
+    background: linear-gradient(160deg, var(--gold-bright), var(--gold));
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+
+  .entry ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--cream-dim);
+    line-height: 1.65;
+    font-size: 0.95rem;
+    display: grid;
+    gap: 8px;
+  }
+
+  .entry ul li::marker {
+    color: var(--gold);
+  }
+
+  .suits {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 44px 0 12px;
+    font-size: 1.1rem;
+    color: var(--cream-faint);
+  }
+
+  .suits .red {
+    color: var(--red-suit);
+  }
+
+  footer {
+    text-align: center;
+    color: var(--cream-faint);
+    font-size: 0.82rem;
+    margin-top: 8px;
+  }
+
+  footer a {
+    color: var(--cream-faint);
+  }
+
+  @media (max-width: 480px) {
+    .entry {
+      padding: 22px 20px;
+    }
+  }
+</style>
+
+<main>
+  <div class="mark">
+    <div class="mark-badge">31</div>
+    <span class="mark-name">31 &middot; Card Game</span>
+  </div>
+
+  <h1>Release Notes</h1>
+  <p class="subtitle">
+    What's new in 31, version by version.
+  </p>
+
+  <div class="timeline">
+    <div class="entry">
+      <div class="entry-tag">Latest</div>
+      <div class="entry-header">
+        <span class="entry-version">Version 1.0</span>
+        <span class="entry-date">September 2026</span>
+      </div>
+      <ul>
+        <li>Initial release: play 31 (also known as Scat or Blitz) solo against AI opponents, pass-and-play style.</li>
+        <li>Adjustable house rules, including an Extra Wild card, a Blind Knock Round, and an optional knock penalty.</li>
+        <li>Chips and dollar amounts are for scorekeeping only - no real money is ever used, wagered, or won.</li>
+        <li>Compact, phone-friendly table for landscape play, alongside the classic full table view.</li>
+        <li>A guided in-app tour walks new players through setup and their first hand.</li>
+        <li>Built-in Full Rules reference and a Check My Math discard warning to help you avoid costly mistakes.</li>
+        <li>Undo option for your most recent action, plus custom bot names and card back themes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="suits" aria-hidden="true">
+    <span class="red">&#9830;</span>
+    <span>&#9824;</span>
+    <span class="red">&#9829;</span>
+    <span>&#9827;</span>
+  </div>
+  <footer>31 Card Game &middot; <a href="./">Support</a></footer>
+</main>
