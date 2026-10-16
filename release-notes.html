@@ -179,6 +179,10 @@
     color: var(--cream-faint);
   }
 
+  footer [aria-current="page"] {
+    color: var(--cream-dim);
+  }
+
   @media (max-width: 480px) {
     .entry {
       padding: 22px 20px;
@@ -201,6 +205,25 @@
     <div class="entry">
       <div class="entry-tag">Latest</div>
       <div class="entry-header">
+        <span class="entry-version">Version 2.1.0</span>
+        <span class="entry-date">October 2026</span>
+      </div>
+      <ul>
+        <li>New look: the WestEnd Pros bot names and a walnut WestEnd card back are now the defaults. Players who already had the app are moved to them once, and can switch back any time in Settings.</li>
+        <li>When you deal, you are now dealt four cards and choose which one to discard to start the game.</li>
+        <li>Tap the discard pile to take it or the draw pile to draw, as an alternative to the action buttons. The piles glow and flash when it is your turn, and the "Use the action buttons" setting brings the buttons back.</li>
+        <li>A new Extra Wild banner spells out which cards are wild ("All Queens are wild") and glows when you are holding one.</li>
+        <li>Auto-play button: let the bots play on their own, or pause before each bot's turn and tap Continue to move the game along.</li>
+        <li>New sound effects and spoken lines in three voice styles. Game sounds and Voice are now separate switches, with a checkbox for every individual sound, and only one spoken line plays per round.</li>
+        <li>Easy finish option: on the last draw of a round the game can settle your best three cards for you. Turn it off to choose your own discard.</li>
+        <li>iPad: the full oval table now has the draw pile, the Extra Wild banner and tappable piles, and larger Knock and Continue buttons. The iPad also shows tips when you hover over the sound and Auto-play buttons.</li>
+        <li>Cleaner table: only the most recent discard is shown under a player's name, the Start Next Round button now flashes, and small phones get tighter spacing.</li>
+        <li>The game asks for your name the first time you play, and keeps it until you reset it.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
         <span class="entry-version">Version 1.0</span>
         <span class="entry-date">September 2026</span>
       </div>
@@ -222,5 +245,5 @@
     <span class="red">&#9829;</span>
     <span>&#9827;</span>
   </div>
-  <footer>31: WestEnd Rules &middot; <a href="./">Support</a></footer>
+  <footer>31: WestEnd Rules &middot; <a href="./">Support</a> &middot; <span aria-current="page">Release notes</span> &middot; <a href="privacy.html">Privacy policy</a></footer>
 </main>
